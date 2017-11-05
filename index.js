@@ -11,12 +11,12 @@ const port = 3000 //binds to port 3000 to listen on
 const requestHandler = (request, resposne) => {
 	console.log(request.url)
 	response.end('Hello Node.js Server!')
-	}
+	} //request handler invoked every time a request hits a server
 const server = http.createServer(requestHandler)
 
 server.listen(port, (err) => {
 	if (err){
-		return console.log('something bad happened', err)
+		return console.log('something bad happened', err) //error handling if port is already taken
 	}
 	console.log(`server is litening on ${port}`)
 })
